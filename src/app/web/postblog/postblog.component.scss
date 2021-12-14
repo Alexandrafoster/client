@@ -1,0 +1,52 @@
+.title-center {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+  .mat-form-field--inline {
+    // display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .mat-form-field--inline .mat-form-field {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+  }
+  
+  .mat-form-field--inline .mat-form-field:nth-child(1) {
+    margin-right: 10px;
+  }
+  .mat-form-field--inline .mat-form-field:nth-child(2) {
+    margin-right: 10px;
+  }
+  .mat-form-field--inline .mat-form-field:nth-child(3) {
+    margin-right: 10px;
+  }
+  .mat-form-field--inline .mat-form-field:nth-child(4) {
+    margin-right: 10px;
+  }
+  .policy-card {
+    height: 310px;
+    min-height: 310px;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    overflow: auto;
+  }
+  .user-block{
+    img{
+        border-radius: 5%;
+        padding-right: 40px;
+        width: 950px;
+        height: 70px;
+        border: 1px solid rgba(0,0,0,.12);
+    }
+    h2{
+        font-size: 16px;
+        font-weight: 400;
+    }
+    p{
+        font-size: 13px;
+    }
+  }

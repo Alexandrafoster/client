@@ -1,0 +1,75 @@
+<!-- <p>postblog works!</p> -->
+<mat-toolbar color="white" class="p-0 mat-card"> 
+    <mat-toolbar-row>
+      <span class="title-center">Add Post</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-card>
+      <!-- <mat-card-header fxLayoutAlign="center">                
+          <div fxLayout="column" fxLayoutAlign="center center" class="user-block">
+              <img *ngIf="!imgURL" src="assets/img/default.jpg" alt="user-image"/>
+              <img [src]="imgURL" *ngIf="imgURL">
+          </div>
+      </mat-card-header> -->
+      <mat-card-content fxLayoutAlign="center center">
+              <div class="file-upload" style="align-self: center;">
+                  <label>Select Thumbnail Image (240x320)</label>
+                  <!-- <button mat-raised-button  onclick="document.getElementById('thumbnail').click()">Your text here</button> -->
+                  <input #file type="file" accept='image/*' name="thumbnail" id="thumbnail" (change)="selectImage($event)">
+              </div>
+      </mat-card-content>
+      <mat-card-content fxLayoutAlign="center center">
+            <div class="file-upload" style="align-self: center;">
+              <label>Select Header Image (1920x1080)</label>
+                  <input  #file type="file" accept='image/*' name="headerimage" id="headerimage" (change)="selectImage($event)">
+            </div>
+      </mat-card-content>
+  
+  </mat-card>
+  <mat-card class="policy-card">
+    <mat-card-content fxLayoutAlign="center">
+  <form class="mat-dialog-contains" style="min-width: 90%" #formControl="ngForm">
+  <li class="mat-form-field--inline">
+      <mat-form-field style="color: black;">
+          <input matInput style="color: black;" #input class="form-control" placeholder="Thumb Caption" [(ngModel)]="data.thumbcaption" name="thumbcaption" required >
+          <!-- <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field style="color: black;">
+          <input matInput style="color: black;" #inputstate class="form-control" placeholder="Header Heading" [(ngModel)]="data.headerheading" name="headerheading" required>
+          <!-- <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> -->
+      </mat-form-field>
+      <mat-form-field style="color: black;">
+        <input matInput style="color: black;" #inputstate class="form-control" placeholder="Header Content" [(ngModel)]="data.headercontent" name="headercontent" required>
+        <!-- <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+        <mat-form-field style="color: black;">
+            <input matInput style="color: black;" #inputstate class="form-control" placeholder="Body Heading" [(ngModel)]="data.bodyheading" name="bodyheading" required>
+            <!-- <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> -->
+        </mat-form-field>
+      <mat-form-field style="color: black;">
+        <input matInput style="color: black;" #inputstate class="form-control" placeholder="Body Content" [(ngModel)]="data.bodycontent" name="bodycontent" required>
+        <!-- <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+      <mat-form-field style="color: black;">
+        <input matInput style="color: black;" #inputstate class="form-control" placeholder="Second Body Heading" [(ngModel)]="data.bodyheading2" name="bodyheading2" required>
+        <!-- <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+    <mat-form-field style="color: black;">
+        <input matInput style="color: black;" #inputstate class="form-control" placeholder="Second Body Content" [(ngModel)]="data.bodycontent2" name="bodycontent2" required>
+        <!-- <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error> -->
+    </mat-form-field>
+  
+    </li>
+  
+   
+     
+  
+    
+  
+      <div mat-dialog-actions>
+          <button mat-raised-button color="primary" [type]="submit" [disabled]="!formControl.valid" [mat-dialog-close]="1" (click)="confirmAdd()">Save</button>
+          <!-- <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1">Cancel</button> -->
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>

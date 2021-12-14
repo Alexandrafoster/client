@@ -1,0 +1,49 @@
+<video autoplay muted loop id="bg-video">
+  <source src="assets/video/gfp-astro-timelapse.mp4" type="video/mp4">
+</video>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="cd-slider-nav">
+          <nav class="navbar navbar-expand-lg" id="tm-nav">
+            <!-- <a class="navbar-brand" href="#">Alexandra Foster's Blog</a> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-supported-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbar-supported-content">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link"  [routerLink]="['/']">Home</a>
+                    <div class="circle"></div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/latestposts']" >Latest Posts</a>
+                    <div class="circle"></div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/about']">About</a>
+                    <div class="circle"></div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/contact']">Contact</a>
+                    <div class="circle"></div>
+                  </li>
+                  <section *ngIf="this.tocen == null">
+                  <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/sign-in']">SignIn</a>
+                    <div class="circle"></div>
+                  </li>
+                  </section>
+                  <section *ngIf="this.tocen != null">
+                    <li class="nav-item">
+                      <a class="nav-link" [routerLink]="['/sign-out']" data-no="5">SignOut</a>
+                      <div class="circle"></div>
+                    </li>
+                    </section>
+                </ul>
+              </div>
+          </nav>
+        </div>
+      </div>  
+    </div>        
+  </div>

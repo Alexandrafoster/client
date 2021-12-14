@@ -1,0 +1,42 @@
+<div class="page-container">
+<app-header></app-header>
+<div class="container-fluid tm-content-container">
+    <div class="mx-auto position-relative gallery-container">
+<ngx-slick-carousel class="carousel" id="home"
+      #slickModal="slick-carousel" 
+      [config]="slideConfig">
+ <div ngxSlickItem class="slide" *ngFor="let images of this.arr.slice(0, 50)">
+     <img src="{{ env+images.thumbnail }}" alt="" width="240px" height="320px" style="margin-bottom: 150px;">
+     <h2 (click)="checkid(images.id)">{{images.thumbcaption}}</h2>
+ </div>
+</ngx-slick-carousel>
+<!-- <section class="top_slider">
+  <div class="slide">
+    <img src="https://unsplash.it/400/250">
+    <h2>text 1</h2>
+  </div>
+  <div class="slide">
+    <img src="http://placehold.it/400x250">
+    <h2>text 2</h2>
+  </div>
+  <div class="slide">
+    <img src="https://unsplash.it/400/250">
+    <h2>text 3</h2>
+  </div>
+</section> -->
+    </div>
+    <section *ngIf="this.tocen != null">
+      <div class="example-button-row fab-bottom-right">
+        <div class="example-flex-container">
+          <div class="example-button-container">
+            <button mat-fab color="white" class="fab-bottom-right" (click)="addNew($event)">
+              <mat-icon>add</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+</div>
+
+<app-footer></app-footer>
+</div>

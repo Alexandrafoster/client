@@ -1,0 +1,56 @@
+
+    <section id="hero" class="hero" style="background-image:url({{env+data.headerimage}})">
+      <div class="container text-center">
+        <div class="col-md-12">
+          <h1 style="font-family: Roboto; font-size: 40px; line-height: 60px;">
+            {{data.headerheading}}
+          </h1>
+  
+          <p class="tagline">{{data.headercontent}}</p>
+          <p class="tagline">{{formatedDate}}</p>
+          <br>
+          <a class="btn btn-full scrollto" routerLink="/latestposts">Back to Home</a>
+          &nbsp;
+          <a *ngIf="this.tocen != null" class="btn btn-full scrollto" (click)="postdelete()">Delete Post</a>
+        </div>
+      </div>
+  
+    </section>
+    <main id="main">
+
+      <section class="about" id="about">
+        <div class="container text-center">
+          <h1 style="font-family: Roboto; font-size: 40px; line-height: 60px;">
+            {{data.bodyheading}}
+          </h1>
+          <p>
+            {{data.bodycontent}}
+          </p>
+        </div>
+      </section>
+  
+      <section class="about" id="about">
+        <div class="container text-center">
+          <h1 style="font-family: Roboto; font-size: 40px; line-height: 60px;">
+            {{data.bodyheading2}}
+          </h1>
+          <p>
+            {{data.bodycontent2}}
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="bottom">
+        <div class="container">
+          <div class="row">
+  
+            <div class="text-center">
+              <p class="copyright-text">
+                &copy; Copyright <strong>Alexandra Foster's Blog</strong>. All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>

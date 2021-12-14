@@ -1,0 +1,37 @@
+<div class="page-container">
+  <app-header></app-header>
+
+<div class="container-fluid tm-content-container">
+      <div class="page-width-1 page-left">
+        <div class="d-flex position-relative tm-border-top tm-border-bottom intro-container">
+          <div class="intro-left tm-bg-dark">
+            <h2 class="mb-4" style="color: white;">Welcome to Alexandra Foster's Blog</h2>
+            <p class="mb-4" style="color: white;">Alexandra Foster's award-winning single female travel blog features travel information, resources, and recommendations from worldwide.</p>
+            <P class="mb-4" style="color: white;">I left my corporate job in the United States at the age of 21 to follow my ambition of travelling the globe and starting my own remote business. It all looked insane at the time, especially because I was young and broke, but after a few months, I was able to pull it off!</P>
+            <p class="mb-0" style="color: white;">
+              I am now a successful solo female traveler and online entrepreneur (including vlogger and blogger) who has visited all seven continents </p>
+          </div>
+          <div class="intro-right">
+            <img src="assets/img/home-img-1.jpg" alt="Image" class="img-fluid intro-img-1">
+            <img src="assets/img/home-img-2.jpg" alt="Image" class="img-fluid intro-img-2">
+          </div>
+          <div class="circle intro-circle-1"></div>
+          <div class="circle intro-circle-2"></div>
+          <div class="circle intro-circle-3"></div>
+          <div class="circle intro-circle-4"></div>
+        </div>
+      </div>            
+</div>
+<section *ngIf="this.tocen != null">
+  <div class="example-button-row fab-bottom-right">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-fab color="white" class="fab-bottom-right" (click)="addNew($event)">
+          <mat-icon>add</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
+</div>
